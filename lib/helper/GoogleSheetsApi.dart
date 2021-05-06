@@ -12,8 +12,9 @@ class GoogleSheets {
   });
 
   Future<List> sheetData() async {
-    final url =
-        'https://sheets.googleapis.com/v4/spreadsheets/${this.sheetId}/values/${this.sheetName}?key=${this.apiKey}';
+    // Google Sheet API URL
+    final url = Uri.parse(
+        'https://sheets.googleapis.com/v4/spreadsheets/${this.sheetId}/values/${this.sheetName}?key=${this.apiKey}');
     try {
       final response = await http.get(url);
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
