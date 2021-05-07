@@ -8,6 +8,8 @@ class GetAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.title,
   }) : super(key: key);
 
+  // Set Fixed Size For Custom AppBar Height
+  // If we remove this will make errors on the screen
   @override
   Size get preferredSize => const Size.fromHeight(60);
 

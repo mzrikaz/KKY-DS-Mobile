@@ -6,8 +6,11 @@ class GoogleSheets {
   final String apiKey, sheetId, sheetName;
 
   const GoogleSheets({
+    // API Key Obtained in Google Cloud Console
     this.apiKey = 'AIzaSyCtIkGcfnMmiN1Yp6OrJg-zHE9USRdw85o',
+    // Name visible on Google SpreadSheet
     @required this.sheetName,
+    // This is the unique id of every main sheet in google sheets
     @required this.sheetId,
   });
 
@@ -18,6 +21,7 @@ class GoogleSheets {
     try {
       final response = await http.get(url);
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
+      // All column and row datas of spreadsheets are wrap inside `values` array
       return extractedData['values'];
     } catch (e) {
       throw (e);

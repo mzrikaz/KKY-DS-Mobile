@@ -15,19 +15,24 @@ class ShowHtml extends StatelessWidget {
   final String date;
   final String contents;
 
+  // This is used for custom html view page with the help of `flutter_html` package
+
   @override
   Widget build(BuildContext context) {
     String datePara = "";
+    // This date is only used in `Events Detail` pages
     if (date != "") datePara = "<p>$date</p>";
     return SingleChildScrollView(
       child: Html(
         data: """<h2>$title</h2>$datePara$contents""",
+        // If there are  `<a>` links in html content then it will open in
+        // external browser
         onLinkTap: ((link) {
           launch(link);
         }),
         style: {
           'body': Style(fontSize: FontSize.em(1.1)),
-          'table': Style(fontSize: FontSize.medium),
+          'table': Style(fontSize: FontSize.small),
         },
       ),
     );

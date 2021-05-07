@@ -5,6 +5,8 @@ class ShowHomeBackground extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
+  // This is the background image visible on entry screen of the app
+
   @override
   Widget build(BuildContext context) {
     return Container(

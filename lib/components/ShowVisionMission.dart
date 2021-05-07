@@ -9,6 +9,8 @@ class ShowVisionMission extends StatelessWidget {
     this.size,
   }) : super(key: key);
 
+  // Vision Mission Card is visible on entry screen of the app
+
   @override
   Widget build(BuildContext context) {
     return Positioned(

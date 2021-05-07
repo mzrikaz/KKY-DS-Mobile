@@ -30,6 +30,7 @@ class PrimaryButton extends StatelessWidget {
       ),
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 5),
+        // Take 80% of the screen as width
         width: size.maxWidth * 0.8,
         child: Text(
           title,
