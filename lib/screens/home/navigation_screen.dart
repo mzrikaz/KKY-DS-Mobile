@@ -3,8 +3,8 @@ import 'package:kky_ds/components/GetAppBar.dart';
 import 'package:kky_ds/components/ShowCredits.dart';
 import 'package:kky_ds/constants.dart';
 import 'package:kky_ds/helper/navigation_items.dart';
+import 'package:kky_ds/screens/administration/structure_navigation_screen.dart';
 import 'package:kky_ds/screens/events/events_screen.dart';
-import 'package:kky_ds/screens/administration/officers_contact_screen.dart';
 import 'package:kky_ds/screens/registered_organizations/registered_organizations_screen.dart';
 import 'package:kky_ds/screens/services/services_navigation_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -37,7 +37,8 @@ class NavigationScreen extends StatelessWidget {
                                 break;
                               case 2:
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (_) => OfficersContactScreen()));
+                                    builder: (_) =>
+                                        StructureNavigationScreen()));
                                 break;
                               case 3:
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -86,9 +87,9 @@ class NavigationScreen extends StatelessWidget {
                               children: [
                                 Container(
                                   height: 50,
-                                  child: Image.asset(
-                                    division.image,
-                                    fit: BoxFit.cover,
+                                  child: Icon(
+                                    division.icon,
+                                    size: 50,
                                   ),
                                 ),
                                 FittedBox(

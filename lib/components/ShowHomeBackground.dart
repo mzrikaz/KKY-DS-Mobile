@@ -14,7 +14,7 @@ class ShowHomeBackground extends StatelessWidget {
         image: DecorationImage(
           image: const AssetImage('assets/images/front_bg.jpg'),
           colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.5), BlendMode.dstATop),
+              Colors.black.withOpacity(0.6), BlendMode.dstATop),
           fit: BoxFit.cover,
         ),
       ),

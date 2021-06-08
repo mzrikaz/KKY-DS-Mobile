@@ -27,7 +27,7 @@ class ShowCredits extends StatelessWidget {
             color: Colors.red,
           ),
           Text(
-            ' in Sri Lanka by WitsBerry',
+            ' in Sri Lanka by Witsberry',
             style: TextStyle(
               color: Colors.black,
               fontSize: 11,

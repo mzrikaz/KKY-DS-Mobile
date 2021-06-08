@@ -1,30 +1,31 @@
+import 'package:flutter/material.dart';
 import 'package:kky_ds/models/Division.dart';
 
 const NAVIGATION_ITEMS = const [
   Division(
     id: 1,
     name: 'எம்மைப் பற்றி',
-    image: 'assets/images/divisions/registrar.jpg',
+    icon: Icons.group,
   ),
   Division(
     id: 2,
     name: 'நிர்வாக அமைப்பு',
-    image: 'assets/images/divisions/gn.jpg',
+    icon: Icons.account_tree,
   ),
   Division(
     id: 3,
     name: 'சேவைகள்',
-    image: 'assets/images/divisions/samurdhi.jpg',
+    icon: Icons.miscellaneous_services,
   ),
   Division(
     id: 4,
     name: 'நிகழ்வுகள்',
-    image: 'assets/images/divisions/development.jpg',
+    icon: Icons.event,
   ),
   Division(
     id: 5,
     name: 'பதியப்பட்ட நிறுவனங்கள்',
-    image: 'assets/images/divisions/registrar.jpg',
+    icon: Icons.corporate_fare,
   ),
   // Division(
   //   id: 6,
@@ -49,6 +50,6 @@ const NAVIGATION_ITEMS = const [
   Division(
     id: 6,
     name: 'இணையதளம்',
-    image: 'assets/images/divisions/registrar.jpg',
+    icon: Icons.language,
   ),
 ];

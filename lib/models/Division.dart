@@ -1,13 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
 class Division {
   final int id;
   final String name;
-  final String image;
+  final IconData icon;
 
   const Division({
     @required this.id,
     @required this.name,
-    @required this.image,
+    this.icon,
   });
 }

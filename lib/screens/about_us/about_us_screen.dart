@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kky_ds/components/GetAppBar.dart';
 import 'package:kky_ds/components/ShowSubNavigationItem.dart';
-import 'package:kky_ds/constants.dart';
 import 'package:kky_ds/models/About.dart' show AboutProvider;
 import 'package:provider/provider.dart';
 

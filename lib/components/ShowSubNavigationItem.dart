@@ -8,7 +8,7 @@ class ShowSubNavigationItem extends StatelessWidget {
   final String date;
   const ShowSubNavigationItem({
     Key key,
-    @required this.route,
+    this.route,
     @required this.title,
     this.date = "",
   }) : super(key: key);

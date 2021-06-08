@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:kky_ds/constants.dart';
-import 'package:kky_ds/models/DevelopmentOfficer.dart';
 import 'package:kky_ds/models/Event.dart' show EventsProvider;
-import 'package:kky_ds/models/GNDivision.dart' show GNDivisionProvider;
+import 'package:kky_ds/models/OrganizationalStructure.dart'
+    show OrganizationalStructureProvider;
 import 'package:kky_ds/models/RegisteredOrganization.dart';
 import 'package:kky_ds/models/Service.dart' show ServicesProvider;
 import 'package:kky_ds/models/ServiceDepartment.dart';
+import 'package:kky_ds/models/Staff.dart' show StaffProvider;
 import 'package:kky_ds/screens/home/home_page_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'models/About.dart' show AboutProvider;
-import 'models/FieldOfficer.dart';
-import 'models/RegistrarDivision.dart';
-import 'models/SDODivision.dart' show SDODivisionProvider;
 
 void main() => runApp(MyApp());
 
@@ -21,20 +19,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<GNDivisionProvider>(
-          create: (_) => GNDivisionProvider(),
+        ChangeNotifierProvider<OrganizationalStructureProvider>(
+          create: (_) => OrganizationalStructureProvider(),
         ),
-        ChangeNotifierProvider<SDODivisionProvider>(
-          create: (_) => SDODivisionProvider(),
-        ),
-        ChangeNotifierProvider<DevelopmentOfficerProvider>(
-          create: (_) => DevelopmentOfficerProvider(),
-        ),
-        ChangeNotifierProvider<RegistrarDivisionProvider>(
-          create: (_) => RegistrarDivisionProvider(),
-        ),
-        ChangeNotifierProvider<FieldOfficerProvider>(
-          create: (_) => FieldOfficerProvider(),
+        ChangeNotifierProvider<StaffProvider>(
+          create: (_) => StaffProvider(),
         ),
         // Based on 'சேவைகள்' Sheet
         ChangeNotifierProvider<ServicesDepartmentsProvider>(
@@ -52,7 +41,6 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<AboutProvider>(
           create: (_) => AboutProvider(),
         ),
-        // Based on 'பதியப்பட்ட நிறுவனங்கள்' Sheet
         ChangeNotifierProvider<RegisteredOrganizationProvider>(
           create: (_) => RegisteredOrganizationProvider(),
         ),

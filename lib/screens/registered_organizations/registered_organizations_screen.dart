@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kky_ds/components/GetAppBar.dart';
-import 'package:kky_ds/models/FieldOfficer.dart';
 import 'package:kky_ds/models/RegisteredOrganization.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
