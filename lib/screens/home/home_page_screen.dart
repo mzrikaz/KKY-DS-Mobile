@@ -1,4 +1,3 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:in_app_update/in_app_update.dart';
 import 'package:kky_ds/components/PrimaryButton.dart';
@@ -6,6 +5,7 @@ import 'package:kky_ds/components/ShowCredits.dart';
 import 'package:kky_ds/components/ShowHomeBackground.dart';
 import 'package:kky_ds/components/ShowLogo.dart';
 import 'package:kky_ds/components/ShowVisionMission.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 import 'navigation_screen.dart';
 
@@ -90,8 +90,12 @@ class _HomePageState extends State<HomePage> {
                                 builder: (_) => NavigationScreen(),
                               ));
                       } else {
-                        showSnack(
-                            "You need Mobile Data or WiFi to use this App");
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                                "You need Mobile Data or WiFi to use this App"),
+                          ),
+                        );
                       }
                     },
                   ),
