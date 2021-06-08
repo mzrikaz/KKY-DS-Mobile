@@ -1,3 +1,4 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:in_app_update/in_app_update.dart';
 import 'package:kky_ds/components/PrimaryButton.dart';
@@ -75,14 +76,23 @@ class _HomePageState extends State<HomePage> {
                   PrimaryButton(
                     size: size,
                     title: 'நுழைவு',
-                    action: () {
-                      _updateInfo?.updateAvailability ==
-                              UpdateAvailability.updateAvailable
-                          ? InAppUpdate.performImmediateUpdate()
-                              .catchError((e) => showSnack(e.toString()))
-                          : Navigator.of(context).push(MaterialPageRoute(
-                              builder: (_) => NavigationScreen(),
-                            ));
+                    action: () async {
+                      final Connectivity _connectivity = Connectivity();
+                      ConnectivityResult connectivityResult =
+                          await _connectivity.checkConnectivity();
+                      if (connectivityResult == ConnectivityResult.mobile ||
+                          connectivityResult == ConnectivityResult.wifi) {
+                        _updateInfo?.updateAvailability ==
+                                UpdateAvailability.updateAvailable
+                            ? InAppUpdate.performImmediateUpdate()
+                                .catchError((e) => showSnack(e.toString()))
+                            : Navigator.of(context).push(MaterialPageRoute(
+                                builder: (_) => NavigationScreen(),
+                              ));
+                      } else {
+                        showSnack(
+                            "You need Mobile Data or WiFi to use this App");
+                      }
                     },
                   ),
                   ShowCredits(),

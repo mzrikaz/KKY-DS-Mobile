@@ -27,9 +27,9 @@ class ShowHtml extends StatelessWidget {
         data: """<h2>$title</h2>$datePara$contents""",
         // If there are  `<a>` links in html content then it will open in
         // external browser
-        onLinkTap: ((link) {
+        onLinkTap: (link, _, __, ___) {
           launch(link);
-        }),
+        },
         style: {
           'body': Style(fontSize: FontSize.em(1.1)),
           'table': Style(fontSize: FontSize.small),

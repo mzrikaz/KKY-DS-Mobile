@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kky_ds/components/GetAppBar.dart';
 import 'package:kky_ds/components/ShowSubNavigationItem.dart';
 import 'package:kky_ds/models/OrganizationalStructure.dart';
-import 'package:kky_ds/models/ServiceDepartment.dart';
 import 'package:kky_ds/screens/administration/staff_list_screen.dart';
-import 'package:kky_ds/screens/services/services_list_screen.dart';
 import 'package:provider/provider.dart';
 
 class StructureNavigationScreen extends StatefulWidget {

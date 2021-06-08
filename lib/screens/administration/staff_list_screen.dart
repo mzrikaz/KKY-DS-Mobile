@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kky_ds/components/GetAppBar.dart';
-import 'package:kky_ds/components/ShowSubNavigationItem.dart';
 import 'package:kky_ds/components/StaffListItem.dart';
-import 'package:kky_ds/models/Service.dart' show ServicesProvider;
-import 'package:kky_ds/models/Staff.dart';
-import 'package:kky_ds/screens/services/service_details_screen.dart';
+import 'package:kky_ds/models/Staff.dart' show StaffProvider;
 import 'package:provider/provider.dart';
 
 class StaffListScreen extends StatefulWidget {

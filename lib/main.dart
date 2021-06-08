@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:kky_ds/constants.dart';
 import 'package:kky_ds/models/Event.dart' show EventsProvider;
 import 'package:kky_ds/models/OrganizationalStructure.dart'
@@ -12,7 +13,12 @@ import 'package:provider/provider.dart';
 
 import 'models/About.dart' show AboutProvider;
 
-void main() => runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
