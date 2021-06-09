@@ -34,10 +34,14 @@ class StaffListItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ListTile(
-              leading: image == "-"
-                  ? Image.asset(
-                      'assets/images/dummy_${gender.toLowerCase()}.jpg')
-                  : Image.network(image),
+              leading: image == null
+                  ? SizedBox(
+                      width: 1 / 2,
+                    )
+                  : image == "-"
+                      ? Image.asset(
+                          'assets/images/dummy_${gender.toLowerCase()}.jpg')
+                      : Image.network(image),
               title: Text(
                 name,
                 softWrap: true,
